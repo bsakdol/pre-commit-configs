@@ -1,0 +1,6 @@
+- id: meta-hook
+  name: Hook wrapper
+  entry: hooks/meta-hook.sh
+  language: script
+  require_serial: true
+  description: For better or worse, provides central management of pre-commit
