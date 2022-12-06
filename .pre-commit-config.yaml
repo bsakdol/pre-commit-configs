@@ -23,7 +23,7 @@ repos:
       # https://github.com/antonbabenko/pre-commit-terraform#terraform_docs
       - id: terraform_docs
         args:
-          - '--args=--config=__GIT_WORKING_DIR__/.terraform_docs.yaml'
+          - '--args=--config=.terraform_docs.yaml'
 
       # https://github.com/antonbabenko/pre-commit-terraform#terraform_fmt
       - id: terraform_fmt
@@ -36,12 +36,12 @@ repos:
       # https://github.com/antonbabenko/pre-commit-terraform#terraform_tflint
       - id: terraform_tflint
         args:
-          - '--args=--config=__GIT_WORKING_DIR__/.tflint.hcl'
+          - '--args=--config=.tflint.hcl'
 
       # https://github.com/antonbabenko/pre-commit-terraform#terraform_tfsec
       - id: terraform_tfsec
         args:
           - '--args=--exclude-downloaded-modules'
-          - '--args=--custom-check-dir=__GIT_WORKING_DIR__/.tfsec.json'
+          - '--args=--custom-check-dir=.tfsec.json'
         exclude: '\.terraform\/.*$'
         files: '\.tf$'
